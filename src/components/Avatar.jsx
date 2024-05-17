@@ -216,6 +216,71 @@ export function Avatar(props) {
     }
   });
 
+  // viseme_CH
+  // :
+  // 6
+  // viseme_DD
+  // :
+  // 4
+  // viseme_E
+  // :
+  // 11
+  // viseme_FF
+  // :
+  // 2
+  // viseme_I
+  // :
+  // 12
+  // viseme_O
+  // :
+  // 13
+  // viseme_PP
+  // :
+  // 1
+  // viseme_RR
+  // :
+  // 9
+  // viseme_SS
+  // :
+  // 7
+  // viseme_TH
+  // :
+  // 3
+  // viseme_U
+  // :
+  // 14
+  // viseme_aa
+  // :
+  // 10
+  // viseme_kk
+  // :
+  // 5
+  // viseme_nn
+  // :
+  // 8
+  // viseme_sil
+  // :
+  // 0
+
+  useEffect(() => {
+    // tryout the lip changes based on viseme
+    nodes.Wolf3D_Head.morphTargetInfluences[
+      nodes.Wolf3D_Head.morphTargetDictionary["viseme_PP"]
+    ] = 0;
+    nodes.Wolf3D_Teeth.morphTargetInfluences[
+      nodes.Wolf3D_Teeth.morphTargetDictionary["viseme_I"]
+    ] = 5.5;
+    nodes.Wolf3D_Teeth.morphTargetInfluences[
+      nodes.Wolf3D_Teeth.morphTargetDictionary["viseme_FF"]
+    ] = 15;
+    nodes.Wolf3D_Teeth.morphTargetInfluences[
+      nodes.Wolf3D_Teeth.morphTargetDictionary["viseme_TH"]
+    ] = 0;
+    nodes.Wolf3D_Teeth.morphTargetInfluences[
+      nodes.Wolf3D_Teeth.morphTargetDictionary["viseme_KK"]
+    ] = 0.5;
+  }, []);
+
   useEffect(() => {
     nodes.Wolf3D_Head.morphTargetInfluences[
       nodes.Wolf3D_Head.morphTargetDictionary["viseme_I"]
